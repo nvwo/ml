@@ -5,7 +5,8 @@ welcome_message: <a href="https://github.com/nvwo" target="_blank">补天研究�
 description: AI学习应用组织.
 creator: <a href="https://github.com/amrf000">@amrf000</a>
 
-url: "http://nvwo.github.io/ml"
+baseurl: "/ml"
+url: "http://nvwo.github.io"
 
 permalink: /:year/:month/:title/
 
