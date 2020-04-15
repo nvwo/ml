@@ -1,0 +1,28 @@
+﻿---
+layout: post
+title: 支持向量机 - SVM
+date: 2020-04-16 0:20:24.000000000 +09:00
+---
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body,   {delimiters: [{left: '$$', right: '$$', display: true},{left: '$', right: '$', display: false}]});"></script>
+[wikipedia原文](https://zh.wikipedia.org/wiki/%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA)
+
+## 概述   
+在机器学习中，支持向量机（英语：support vector machine，常简称为SVM，又名支持向量网络[1]）是在分类与回归分析中分析数据的监督式学习模型与相关的学习算法。
+## 定义  
+更正式地来说，支持向量机在高维或无限维空间中构造超平面或超平面集合，其可以用于分类、回归或其他任务。
+直观来说，分类边界距离最近的训练数据点越远越好，因为这样可以缩小分类器的泛化误差。
+尽管原始问题可能是在有限维空间中陈述的，但用于区分的集合在该空间中往往线性不可分。为此，有人提出将原有限维空间映射到维数高得多的空间中，
+在该空间中进行分离可能会更容易。为了保持计算负荷合理，人们选择适合该问题的核函数 ${\displaystyle k(x,y)}$ 来定义SVM方案使用的映射，
+以确保用原始空间中的变量可以很容易计算点积。[3] 高维空间中的超平面定义为与该空间中的某向量的点积是常数的点的集合。
+定义超平面的向量可以选择在数据基中出现的特征向量 ${\displaystyle x_{i}}$ 的图像的参数 ${\displaystyle \alpha_{i}}$ 的线性组合。
+通过选择超平面，被映射到超平面上的特征空间中的点集 ${\displaystyle x}$ 由以下关系定义：
+${\displaystyle \textstyle \sum_{i}\alpha_{i}k(x_{i},x)=\mathrm {constant} .}$
+注意，如果随着 ${\displaystyle y}$ 逐渐远离 ${\displaystyle x}$，${\displaystyle k(x,y)}$ 变小，
+则求和中的每一项都是在衡量测试点 ${\displaystyle x}$ 与对应的数据基点 ${\displaystyle x_{i}}$ 的接近程度。
+这样，上述内核的总和可以用于衡量每个测试点相对于待分离的集合中的数据点的相对接近度。 
+## 历史  
+* 原始SVM算法是由弗拉基米尔·万普尼克和亚历克塞·泽范兰杰斯于1963年发明的。
+* 1992年，Bernhard E. Boser、Isabelle M. Guyon和弗拉基米尔·万普尼克提出了一种通过将核技巧应用于最大间隔超平面来创建非线性分类器的方法。[9] 
+* 当前标准的前身（软间隔）由Corinna Cortes和Vapnik于1993年提出，并于1995年发表。[1]

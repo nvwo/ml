@@ -48,3 +48,7 @@ social:
 ga:
     # id: your_ga_id
     # host: your_host
+
+markdown: kramdown
+kramdown:
+    math_engine: katex
