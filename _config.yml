@@ -18,13 +18,13 @@ cover_color: green
 
 # The blog button should not be removed.
 blog_button:
-    title: Blog
-    description: 笔记
+    title: 全部
+    description: 全部
 
 # Navigation buttons in the front page.
 nav:
-    - {title: Projects, description: 项目, url: 'https://github.com/nvwo'}
-    # - {title: Another Button, description: A button, url: 'http://example.com'}
+    - {title: 目录, description: 目录, url: '/ml/categories/'}
+    - {title: 标签, description: 标签, url: '/ml/tags/'}
 
 # Pagination
 plugins: [jekyll-paginate]
